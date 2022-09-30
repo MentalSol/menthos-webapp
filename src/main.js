@@ -4,6 +4,16 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+// Add Theme
+import 'primevue/resources/primevue.min.css';
+import 'primeicons/primeicons.css';
+import 'primevue/resources/themes/md-light-indigo/theme.css';
+
+
+// Add PrimeFlex
+import 'primeflex/primeflex.css';
+
+
 //Add ToastService
 import ToastService from "primevue/toastservice";
 import DataTable from "primevue/datatable";
