@@ -1,0 +1,44 @@
+{
+  "subjects": [
+    {
+      "id": 1,
+      "title": "Calculo I"
+    },
+    {
+      "id": 2,
+      "title": "Calculo II"
+    },
+    {
+      "id": 3,
+      "title": "Matemática Básica"
+    },
+    {
+      "id": 4,
+      "title": "Matemática Computacional"
+    },
+    {
+      "id": 5,
+      "title": "Programación I"
+    },
+    {
+      "id": 6,
+      "title": "Programación II"
+    },
+    {
+      "id": 7,
+      "title": "Física I"
+    },
+    {
+      "id": 8,
+      "title": "Física II"
+    },
+    {
+      "id": 9,
+      "title": "Química"
+    },
+    {
+      "id": 10,
+      "title": "Construcción I"
+    }
+  ]
+}
