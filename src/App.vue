@@ -7,7 +7,7 @@
         <pv-button icon="pi pi-bars"
                    class="p-button-text text-white"
                    @click="drawer = !drawer"></pv-button>
-        <h3>ACME Learning Center</h3>
+        <h3>Menthos</h3>
       </template>
       <template #end>
         <div class="flex-column">
