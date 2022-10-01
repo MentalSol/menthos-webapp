@@ -5,7 +5,8 @@
       tus temas de interes</h3>
   </div>
   <div class="flex align-items-center justify-content-center ">
-    <pv-button class="p-button-raised  w-30rem align-items-center h-4rem">Regístrate</pv-button>
+    <a href="/sign-up-form"> <pv-button class="p-button-raised  w-30rem align-items-center h-4rem">Regístrate</pv-button></a>
+
   </div>
   <div class="flex align-items-center justify-content-center mt-5" >
     <div class="w-30rem h-3rem relative">

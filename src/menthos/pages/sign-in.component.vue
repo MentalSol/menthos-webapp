@@ -11,8 +11,8 @@
       <pv-input-text class="block bg-bluegray-100 font-bold text-center p-4 border-round mb-3 w-30rem h-1rem"/>
 
       <pv-input-text class="block bg-bluegray-100 font-bold text-center p-4 border-round mb-3 w-30rem h-1rem"/>
+      <a href="/home"><pv-button class="p-button-raised p-button-rounded w-30rem ">Iniciar Sesión</pv-button></a>
 
-      <pv-button class="p-button-raised p-button-rounded w-30rem ">Iniciar Sesión</pv-button>
     </div>
 
   </div>
