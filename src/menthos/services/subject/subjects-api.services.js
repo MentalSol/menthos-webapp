@@ -2,8 +2,8 @@ import http from "../../../core/services/http-common";
 
 export class SubjectsApiServices {
     //GET
-    async getSubjects() {
-        return await http.get("/subjects");
+    getSubjects() {
+        return http.get("/subjects");
     }
     //POST
     createSubjects(data) {
