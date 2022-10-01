@@ -24,7 +24,7 @@
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <h2>¿No tienes una cuenta? <a href="">Registrate</a></h2>
+    <h2>¿No tienes una cuenta? <a href="/sign-up">Registrate</a></h2>
   </div>
 
 </template>
