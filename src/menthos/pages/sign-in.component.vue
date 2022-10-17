@@ -11,14 +11,14 @@
       <pv-input-text class="block bg-bluegray-100 font-bold text-center p-4 border-round mb-3 w-30rem h-1rem"/>
 
       <pv-input-text class="block bg-bluegray-100 font-bold text-center p-4 border-round mb-3 w-30rem h-1rem"/>
-      <a href="/home"><pv-button class="p-button-raised p-button-rounded w-30rem ">Iniciar Sesión</pv-button></a>
+      <a href="/home"><pv-button class="p-button-raised p-button-rounded w-30rem justify-content-center">Iniciar Sesión</pv-button></a>
 
     </div>
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <div class="w-30rem h-3rem relative">
-      <Chexbox class="top-0 "/><p class="top-0 absolute">No cerrar sesión</p>
+    <div class="w-30rem h-3rem relative flex flex-direction-column">
+      <input type="checkbox" class="top-0 " id="checkbox" /><p class="relative">No cerrar sesión</p>
       <p class="absolute top-0 right-0">¿Olvidaste tu contraseña?</p>
     </div>
 
