@@ -1,6 +1,6 @@
 <template>
   <div class="top-container">
-    <h1 >  Bienvenido de nuevo</h1>
+    <h1 >Únete a Menthos</h1>
     <h3>Llene el siguiente formulario</h3>
   </div>
   <div class="flex justify-content-center">
@@ -27,10 +27,15 @@
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <a href="/sign-in"> <pv-button class="p-button-raised  w-30rem align-items-center h-4rem">Regístrarme</pv-button></a>
+    <a href="/sign-in"> <pv-button class="p-button-raised  w-10rem align-items-center h-3rem justify-content-center">Regístrarme</pv-button></a>
 
   </div>
-
+  <div class="flex align-items-center justify-content-center">
+    <h2>¿Ya tienes una cuenta? <a href="/sign-in">Inicia Sesion</a></h2>
+  </div>
+  <footer class="flex align-items-center justify-content-center">
+    <p>Al registrarse, aceptas las <u>Condiciones del Servicio</u> y la <u>Politica de Privacidad</u> de Menthos</p>
+  </footer>
 </template>
 
 <script>
