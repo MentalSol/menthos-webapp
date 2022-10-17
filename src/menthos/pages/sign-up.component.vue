@@ -5,19 +5,26 @@
       tus temas de interes</h3>
   </div>
   <div class="flex align-items-center justify-content-center ">
-    <a href="/sign-up-form"> <pv-button class="p-button-raised  w-30rem align-items-center h-4rem">Regístrate</pv-button></a>
+    <a href="/sign-up-form"> <pv-button class="p-button-raised  w-30rem align-items-center h-3rem justify-content-center">Regístrate</pv-button></a>
 
   </div>
   <div class="flex align-items-center justify-content-center mt-5" >
-    <div class="w-30rem h-3rem relative">
-      <Chexbox /><p class="top-0 absolute">Estudiante</p>
-      <Chexbox class="absolute right-0"/> <p class="absolute top-0 right-0">Tutor</p>
+    <div class="w-30rem h-3rem relative flex flex-direction-column justify-content-between">
+      <div class="flex flex-direction-row">
+      <input type="radio" id="estudiante" class="text-align-left"><p class="text-align-left">Estudiante</p>
+      </div>
+      <div class="flex flex-direction-row">
+      <input type="radio" id="tutor" class="text-align-right"> <p class="text-align-right">Tutor</p>
+      </div>
     </div>
   </div>
-  <Divider></Divider>
+  <Divider class="flex align-content-center justify-content-center">O</Divider>
   <div class="flex align-items-center justify-content-center ">
     <div >
-      <pv-button class="p-button-raised p-button-rounded bg-bluegray-100 w-30rem ">Registra tu correo electrónico</pv-button>
+      <div class="flex flex-direction-column relative justify-content-between">
+        <pv-input-text placeholder="Email"></pv-input-text>
+        <pv-button class="p-button-raised bg-bluegray-100 w-10rem ">Registrarme</pv-button>
+      </div>
       <p class="text-center">No te enviaremos spam. Valoramos tu privacidad</p>
     </div>
   </div>
@@ -28,7 +35,7 @@
 
 <script>
 export default {
-  name: "sign-up.component"
+  name: "sign-up.component",
 }
 </script>
 
