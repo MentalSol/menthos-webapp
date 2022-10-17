@@ -8,9 +8,9 @@
     <Divider />
   <div class="flex align-items-center justify-content-center ">
     <div >
-      <pv-input-text class="block bg-bluegray-100 font-bold text-center p-4 border-round mb-3 w-30rem h-1rem"/>
+      <pv-input-text placeholder="Username" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
 
-      <pv-input-text class="block bg-bluegray-100 font-bold text-center p-4 border-round mb-3 w-30rem h-1rem"/>
+      <pv-input-text placeholder="Password" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
       <a href="/home"><pv-button class="p-button-raised p-button-rounded w-30rem justify-content-center">Iniciar Sesión</pv-button></a>
 
     </div>
