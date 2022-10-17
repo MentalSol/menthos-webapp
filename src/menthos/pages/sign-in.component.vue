@@ -19,7 +19,7 @@
   <div class="flex align-items-center justify-content-center">
     <div class="w-30rem h-3rem relative flex flex-direction-column">
       <input type="checkbox" class="top-0 " id="checkbox" /><p class="relative">No cerrar sesión</p>
-      <p class="absolute top-0 right-0">¿Olvidaste tu contraseña?</p>
+      <a href="/recover-account"><p class="absolute top-0 right-0">¿Olvidaste tu contraseña?</p></a>
     </div>
 
   </div>
