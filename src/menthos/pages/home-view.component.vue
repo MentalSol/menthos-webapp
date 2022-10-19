@@ -15,7 +15,7 @@
       <div class=" justify-content-center align-items-center">
         <h1>Ey! Soy BotBrain</h1>
         <h1>¿Qué es lo que quieres hacer?</h1>
-        <a href="/user-profile"><p>¿Olvidaste tu contraseña?</p></a>
+
       </div>
 
     </div>
