@@ -5,6 +5,7 @@ import signUpComponent from "@/menthos/pages/sign-up.component.vue";
 import signUpFormComponent from "@/menthos/pages/sign-up-form.component.vue";
 import recoverAccountComponent from "@/menthos/pages/recover-account.component.vue";
 import userProfileComponent from "@/menthos/pages/user-profile.component.vue";
+import userProfileEditComponent from "@/menthos/pages/user-profile-edit.component.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path:'/user-profile',
       name:'UserProfile',
       component: userProfileComponent
+    },
+    {
+      path:'/user-profile-edit',
+      name:'UserProfileEdit',
+      component: userProfileEditComponent
     }
   ]
 })
