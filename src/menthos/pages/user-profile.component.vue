@@ -24,9 +24,9 @@
         </div>
       </div>
       <div class="flex justify-content-center">
-        <pv-button class="p-button-raised p-button-rounded w-auto justify-content-center">
+        <a href="/user-profile-edit"><pv-button class="p-button-raised p-button-rounded w-auto justify-content-center">
           <img src="src/assets/images/pluma.png" style="margin-right: 1rem"/>Editar perfil
-        </pv-button>
+        </pv-button></a>
       </div>
       <div>
         <h3>Acerca de</h3>
@@ -44,7 +44,7 @@
       <div>
         <p>Respuestas 0 Preguntas 0</p>
       </div>
-      <div class="col-fixed border-3">
+      <div class="col-fixed border-3 h-25rem">
 
       </div>
     </div>
