@@ -16,6 +16,10 @@
         <h1>Ey! Soy BotBrain</h1>
         <h1>¿Qué es lo que quieres hacer?</h1>
       </div>
+      <div >
+        <pv-button label="Preguntar" class="p-button-raised p-button-rounded"></pv-button>
+        <pv-button label="Responder" class="p-button-raised p-button-rounded"></pv-button>
+      </div>
          <div v-for="question in questions" class="block">
            <pv-card >
              <template #header>
