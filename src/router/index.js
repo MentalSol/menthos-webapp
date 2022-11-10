@@ -11,40 +11,33 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path:'/home',
-      name:'HomeView',
+      path:'/',
+      name:'home',
       component: HomeViewComponent
     },
     {
       path:'/sign-in',
-      name:'SignIn',
-      component: signInComponent
+      name:'sign-in',
+      component: ()=>import('../security/pages/sign-in.vue')
     },
     {
       path:'/sign-up',
-      name:'SignUp',
-      component: signUpComponent
+      name:'sign-up',
+      component: ()=>import('../security/pages/sign-up.vue')
+
     },
     {
-      path:'/sign-up-form',
-      name:'SignUpForm',
-      component: signUpFormComponent
+      path: "/student/:id",
+      name: "student",
+      component: ()=>import('../student/pages/student.component.vue'),
+      children:[
+        {
+          path: "student-home",
+          name: "student-home",
+          component: ()=>import('../student/pages/student-home.component.vue'),
+        },
+      ]
     },
-    {
-      path:'/recover-account',
-      name:'RecoverAccount',
-      component: recoverAccountComponent
-    },
-    {
-      path:'/user-profile',
-      name:'UserProfile',
-      component: userProfileComponent
-    },
-    {
-      path:'/user-profile-edit',
-      name:'UserProfileEdit',
-      component: userProfileEditComponent
-    }
   ]
 })
 

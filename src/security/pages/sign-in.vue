@@ -8,10 +8,15 @@
   <Divider />
   <div class="flex align-items-center justify-content-center ">
     <div >
-      <pv-input-text placeholder="Username" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
+      <pv-input-text id="username" type="text" v-model="this.userName" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
 
-      <pv-input-text placeholder="Password" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
-      <a href="/home"><pv-button class="p-button-raised p-button-rounded w-30rem justify-content-center">Iniciar Sesión</pv-button></a>
+      <pv-input-text id="password" type="password" v-model="this.password" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
+      <div class="field">
+        <span class="details"> Type User :  </span>
+        <pv-select-button style="height: 25px;" v-model="typeUser" :options="optionsUser"
+                          aria-labelledby="single"/>
+      </div>
+      <pv-button class="p-button-raised p-button-rounded w-30rem justify-content-center" label="Login" v-on:click="validate()"></pv-button>
 
     </div>
 
@@ -30,8 +35,50 @@
 </template>
 
 <script>
+import {StudentsApiService} from "@/student/services/students-api.service";
+import {TeachersApiService} from "@/teacher/services/teachers-api.service";
+
 export default {
-  name: "sign-in.vue"
+  name: "sign-in.vue",
+  data(){
+    return {
+      id:Number,
+      user:{},
+      userName:'',
+      password:'',
+      typeUser: 'Student',
+      optionsUser:['Student','Teacher'],
+      students:null,
+      studentService: null,
+      teachers:null,
+      teacherService: null,
+    }
+  },
+  created() {
+    this.studentService = new StudentsApiService();
+    this.studentService.getAll().then((response) => {
+      this.students = response.data;
+    });
+    this.teacherService = new TeachersApiService();
+    this.teacherService.getAll().then((response) => {
+      this.teachers = response.data;
+    });
+  },
+  methods: {
+    validate(){
+      if (this.typeUser==="Teacher") {
+        this.user = this.teachers.find(teacher =>
+            teacher.name === this.userName && teacher.password === this.password);
+        this.id = Number(this.user.id);
+        this.$router.push({name:'supplier-home', params:{id:this.id} /*path: `/supplier/${this.id}/supplier-home`*/});
+      } else if (this.typeUser==="Student"){
+        this.user= this.students.find(student=>
+            student.name === this.userName && student.password===this.password);
+        this.id=Number(this.user.id);
+        this.$router.push({name:'store-home', params:{id:this.id}});
+      }
+    },
+  }
 }
 </script>
 

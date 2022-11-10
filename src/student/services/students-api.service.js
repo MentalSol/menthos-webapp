@@ -1,6 +1,6 @@
 import http from '../../core/services/http-common';
 
-export class StoresApiService {
+export class StudentsApiService {
     getAll() {
         return http.get('/students');
     }
