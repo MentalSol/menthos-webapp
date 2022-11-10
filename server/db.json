@@ -1,5 +1,5 @@
 {
-  "users": [
+  "students": [
     {
       "id": 1,
       "name": "Enrique",
@@ -53,8 +53,9 @@
       "title": "Complejidad"
     }
   ],
-  "questions": [
-    {"id": 1,
+  "teachers": [
+    {
+      "id": 1,
     "content": "Numero Aleatorio del 1 al 100 en C++, Pasarlo a Codigo",
       "userId": 1,
       "subjectId": 5
