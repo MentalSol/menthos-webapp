@@ -14,7 +14,7 @@
       <div class="field">
         <span class="details"> Type User :  </span>
         <pv-select-button style="height: 25px;" v-model="typeUser" :options="optionsUser"
-                          aria-labelledby="single"/>
+        />
       </div>
       <pv-button class="p-button-raised p-button-rounded w-30rem justify-content-center" label="Login" v-on:click="validate()"></pv-button>
 
@@ -46,7 +46,7 @@ export default {
       user:{},
       userName:'',
       password:'',
-      typeUser: 'Student',
+      typeUser: null,
       optionsUser:['Student','Teacher'],
       students:null,
       studentService: null,
@@ -70,12 +70,12 @@ export default {
         this.user = this.teachers.find(teacher =>
             teacher.name === this.userName && teacher.password === this.password);
         this.id = Number(this.user.id);
-        this.$router.push({name:'supplier-home', params:{id:this.id} /*path: `/supplier/${this.id}/supplier-home`*/});
+        this.$router.push({name:'teacher-home', params:{id:this.id} /*path: `/supplier/${this.id}/supplier-home`*/});
       } else if (this.typeUser==="Student"){
         this.user= this.students.find(student=>
             student.name === this.userName && student.password===this.password);
         this.id=Number(this.user.id);
-        this.$router.push({name:'store-home', params:{id:this.id}});
+        this.$router.push({name:'student-home', params:{id:this.id}});
       }
     },
   }
