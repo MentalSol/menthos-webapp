@@ -1,13 +1,12 @@
 <template>
-  <pv-menubar   :model="getUser()" class="mymenu" > <!--style="background-color: #457b9d"-->
-    <template #start >
-      <h1 style="margin: 5px ;   padding: 1px;  ">Menthos</h1>
-    </template>
+  <pv-menubar   :model="getUser()">
+      <h1 style="margin: 5px ;   padding: 1px; border: #9acb3c ">Menthos</h1>
+
   </pv-menubar>
 </template>
 
 <script>
-import {useRoute} from "vue-router";
+import {useRoute} from "vue-router/dist/vue-router";
 
 export default {
   name: "NavBar",
@@ -16,11 +15,12 @@ export default {
     return {
       user: String,
       navigationStudent: [
-        {label: "Home", icon: 'pi pi-fw pi-home', to: {name:'supplier-home'}},
+        {label: "HomeTeacher", icon: 'pi pi-fw pi-home', to: {name:'teacher-home'}},
+        {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'teacher-home'}},
       ],
       navigationTeacher: [
-        {label: "Home", icon: 'pi pi-fw pi-home', to:{name:'store-home'}},
-
+        {label: "HomeStudent", icon: 'pi pi-fw pi-home', to:{name:'student-home'}},
+        {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'student-home'}},
       ],
 
     }

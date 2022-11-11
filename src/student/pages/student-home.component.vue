@@ -26,7 +26,7 @@ export default {
       this.studentsService .getById(id).then((response)=>{
         this.studentData=response.data;
       });
-      console.log("creted")
+      console.log("created")
     }
   }
 }

@@ -33,6 +33,8 @@ import PrimeVue from "primevue/config";
 import Toolbar from "primevue/toolbar";
 import Divider from 'primevue/divider';
 import Checkbox from "primevue/checkbox";
+import SelectButton from "primevue/selectbutton";
+import Menubar from "primevue/menubar";
 createApp(App)
 
     .use(createPinia())
@@ -55,4 +57,6 @@ createApp(App)
     .component('pv-tag',Tag)
     .component('Divider',Divider)
     .component('Chexbox',Checkbox)
+    .component('pv-select-button',SelectButton)
+    .component('pv-menubar',Menubar)
     .mount('#app')

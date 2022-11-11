@@ -38,6 +38,18 @@ const router = createRouter({
         },
       ]
     },
+    {
+      path: "/teacher/:id",
+      name: "teacher",
+      component: ()=>import('../teacher/pages/teacher.component.vue'),
+      children:[
+        {
+          path: "teacher-home",
+          name: "teacher-home",
+          component: ()=>import('../teacher/pages/teacher-home.component.vue'),
+        },
+      ]
+    },
   ]
 })
 
