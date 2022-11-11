@@ -14,9 +14,17 @@
       "id": 2,
       "name": "leonardo",
       "password": "aea"
+    },
+    {
+      "name": "Carlos",
+      "lastName": "Postigo",
+      "userName": "carpost",
+      "email": "",
+      "UpcCode": "u202220027",
+      "password": "kike",
+      "id": 3
     }
   ],
-
   "subjects": [
     {
       "id": 1,
@@ -63,39 +71,46 @@
     {
       "id": 1,
       "name": "Jose",
-      "password": 333
-
+      "password": "ere"
     },
     {
       "id": 2,
       "name": "BROHER",
-     "password": "eea"
+      "password": "eea"
+    },
+    {
+      "name": "kike",
+      "lastName": "kike",
+      "userName": "kikex",
+      "email": "",
+      "password": "kie",
+      "id": 3
     }
   ],
   "ranking": [
     {
       "id": 1,
-      "name":"Tiago Jimenez",
+      "name": "Tiago Jimenez",
       "ranking": 3400
     },
     {
       "id": 2,
-      "name":"Bruno Salas",
+      "name": "Bruno Salas",
       "ranking": 3192
     },
     {
       "id": 3,
-      "name":"Alejandra Tevez",
+      "name": "Alejandra Tevez",
       "ranking": 2452
     },
     {
       "id": 4,
-      "name":"Diego Gomez",
+      "name": "Diego Gomez",
       "ranking": 1320
     },
     {
       "id": 5,
-      "name":"Dayana Castillo",
+      "name": "Dayana Castillo",
       "ranking": 780
     }
   ]

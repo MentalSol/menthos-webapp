@@ -6,28 +6,34 @@
   <div class="flex justify-content-center">
     <div class="card">
       <div class="field">
-        <h3>Nombre:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+        <h3>Nombre:</h3><pv-input-text id="name" v-model="name" class="w-30rem h-2rem"></pv-input-text>
       </div>
       <div class="field">
-        <h3>Apellido:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+        <h3>Apellido:</h3><pv-input-text id="lastName" v-model="lastName" class="w-30rem h-2rem"></pv-input-text>
       </div>
       <div class="field">
-        <h3>Nombre de usuario:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+        <h3>Nombre de usuario:</h3><pv-input-text id="userName" v-model="userName" class="w-30rem h-2rem"></pv-input-text>
       </div>
       <div class="field">
-        <h3>Código UPC:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+        <h3>Código UPC:</h3><pv-input-text id="UpcCode" v-model="UpcCode" class="w-30rem h-2rem"></pv-input-text>
       </div>
       <div class="field">
-        <h3>Escriba su contraseña:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+        <h3>Escriba su contraseña:</h3><pv-input-text id="password" v-model="password" class="w-30rem h-2rem"></pv-input-text>
       </div>
       <div class="field">
         <h3>Confirme la contraseña:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+      </div>
+      <div class="field">
+        <div class="p-float-label">
+          <pv-drop-down id="typeUser" v-model="typeUser" :options="optionsUser"  />
+          <label for="typeUser">User</label>
+        </div>
       </div>
     </div>
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <a href="/sign-in"> <pv-button class="p-button-raised  w-10rem align-items-center h-3rem justify-content-center">Regístrarme</pv-button></a>
+    <a href="/sign-in"> <pv-button class="p-button-raised  w-10rem align-items-center h-3rem justify-content-center" @click="addNewUser()">Regístrarme</pv-button></a>
 
   </div>
   <div class="flex align-items-center justify-content-center">

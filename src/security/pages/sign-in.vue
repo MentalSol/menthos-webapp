@@ -28,7 +28,9 @@
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <h2>¿No tienes una cuenta? <a href="/sign-up">Registrate</a></h2>
+    <h2>¿No tienes una cuenta? </h2>   <RouterLink to="/sign-up">
+    <pv-button label="Regístrate" icon="pi pi-user-plus" class="p-button-success" v-on:keydown="validate()"   > </pv-button>
+  </RouterLink>
   </div>
 
 </template>
@@ -45,7 +47,7 @@ export default {
       user:{},
       userName:'',
       password:'',
-      typeUser: 'Teacher',
+      typeUser: null,
       optionsUser:['Student','Teacher'],
       students:null,
       studentService: null,
