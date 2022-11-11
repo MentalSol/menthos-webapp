@@ -87,6 +87,20 @@
       "id": 3
     }
   ],
+  "questions": [
+    {
+      "id": 1,
+      "content": "Numero Aleatorio del 1 al 100 en C++, Pasarlo a Codigo",
+      "studentId": 1,
+      "subjectId": 5
+    },
+    {
+      "id": 2,
+      "content": "Una carga positiva experimenta una fuerza electrostática de atracción hacia un aislador neutro cercano. Verdadero o falso y la razón pls :(. \n",
+      "userId": 1,
+      "subjectId": 8
+    }
+  ],
   "ranking": [
     {
       "id": 1,

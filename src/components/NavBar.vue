@@ -1,7 +1,12 @@
 <template>
   <pv-menubar   :model="getUser()">
-      <h1 style="margin: 5px ;   padding: 1px; border: #9acb3c ">Menthos</h1>
 
+    <template #start >
+      <h1 style="margin: 5px ;   padding: 1px;  ">Menthos</h1>
+    </template>
+    <template #end>
+      <pv-input-text placeholder="Search" type="text" />
+    </template>
   </pv-menubar>
 </template>
 
@@ -17,10 +22,14 @@ export default {
       navigationStudent: [
         {label: "HomeTeacher", icon: 'pi pi-fw pi-home', to: {name:'teacher-home'}},
         {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'teacher-home'}},
+        {label: "Profile", icon: 'pi pi-fw pi-user'},
+        {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
       navigationTeacher: [
         {label: "HomeStudent", icon: 'pi pi-fw pi-home', to:{name:'student-home'}},
         {label: "Plans", icon: 'pi pi-fw pi-book', to: {name:'student-home'}},
+        {label: "Profile", icon: 'pi pi-fw pi-user'},
+        {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
 
     }

@@ -1,5 +1,6 @@
 <template>
 <NavBar></NavBar>
+
   <RouterView :key="$route.path"></RouterView>
 </template>
 
