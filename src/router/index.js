@@ -41,6 +41,11 @@ const router = createRouter({
           name: 'addQuestion',
           component: ()=>import('../student/pages/student-add-question.component.vue'),
         },
+        {
+          path: "/profile-student/:id",
+          name: "profile-student",
+          component: ()=>import('../student/pages/profile-student.component.vue'),
+        },
       ]
     },
     {

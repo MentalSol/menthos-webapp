@@ -20,14 +20,14 @@ export default {
     return {
       user: String,
       navigationStudent: [
-        {label: "HomeStudent", icon: 'pi pi-fw pi-home', to: {name:'teacher-home'}},
-        {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'teacher-home'}},
-        {label: "Profile", icon: 'pi pi-fw pi-user'},
+        {label: "HomeStudent", icon: 'pi pi-fw pi-home', to: {name:'student-home'}},
+        {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'student-home'}},
+        {label: "Profile", icon: 'pi pi-fw pi-user', to:{name:'profile-student'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
       navigationTeacher: [
-        {label: "HomeTeacher", icon: 'pi pi-fw pi-home', to:{name:'student-home'}},
-        {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'student-home'}},
+        {label: "HomeTeacher", icon: 'pi pi-fw pi-home', to:{name:'teacher-home'}},
+        {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'teacher-home'}},
         {label: "Profile", icon: 'pi pi-fw pi-user'},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],

@@ -16,4 +16,7 @@ export class QuestionsApiServices {
     updateQuestion(id, data) {
         return http.put(`/questions/${id}`, data);
     }
+    findByStudentId(studentId){
+        return http.get(`/questions?studentId=${studentId}`)
+    }
 }

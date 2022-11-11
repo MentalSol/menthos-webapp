@@ -97,7 +97,7 @@
     {
       "id": 2,
       "content": "Una carga positiva experimenta una fuerza electrostática de atracción hacia un aislador neutro cercano. Verdadero o falso y la razón pls :(. \n",
-      "userId": 1,
+      "studentId": 1,
       "subjectId": 8
     },
     {
@@ -111,6 +111,12 @@
       "studentId": 2,
       "subjectId": null,
       "id": 4
+    },
+    {
+      "content": "halla el sexto termino de la p.g 5,15,45​",
+      "studentId": 1,
+      "subjectId": null,
+      "id": 5
     }
   ],
   "answers": [

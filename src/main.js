@@ -35,6 +35,7 @@ import Divider from 'primevue/divider';
 import Checkbox from "primevue/checkbox";
 import SelectButton from "primevue/selectbutton";
 import Menubar from "primevue/menubar";
+import Carousel from "primevue/carousel";
 createApp(App)
 
     .use(createPinia())
@@ -60,4 +61,5 @@ createApp(App)
     .component('pv-select-button',SelectButton)
     .component('pv-menubar',Menubar)
     .component('pv-drop-down',Dropdown)
+    .component('pv-carousel',Carousel)
     .mount('#app')
