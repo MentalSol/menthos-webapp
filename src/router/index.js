@@ -36,6 +36,11 @@ const router = createRouter({
           name: "student-home",
           component: ()=>import('../student/pages/student-home.component.vue'),
         },
+        {
+          path: 'add',
+          name: 'addQuestion',
+          component: ()=>import('../student/pages/student-add-question.component.vue'),
+        },
       ]
     },
     {

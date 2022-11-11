@@ -18,8 +18,9 @@
 
       </div>
       <div >
-        <pv-button label="Preguntar" class="p-button-raised p-button-rounded"></pv-button>
-        <pv-button label="Responder" class="p-button-raised p-button-rounded"></pv-button>
+        <router-link :to="{ name: 'addQuestion' }">
+          <pv-button  icon="pi pi-plus" label="Preguntar"  />
+        </router-link >
       </div>
       <div v-for="question in questions" class="block">
         <pv-card >
@@ -28,6 +29,9 @@
           </template>
           <template #title>
             {{question.content}}
+          </template>
+          <template #item="slotProps">
+            <h1>{{slotProps.data.answers}}</h1>
           </template>
         </pv-card>
       </div>
@@ -62,6 +66,7 @@ import {useRoute} from "vue-router";
 import {StudentsApiService} from "@/student/services/students-api.service";
 import {SubjectsApiServices} from "@/menthos/services/subject/subjects-api.services";
 import {QuestionsApiServices} from "@/menthos/services/question/questions-api.services";
+import {AnswersApiServices} from "@/menthos/services/answer/answers-api.services";
 
 export default {
   name: "student-home.component.vue",
@@ -73,7 +78,9 @@ export default {
       subjects: [],
       subjectsService: null,
       questions:[],
-      questionsService:null
+      questionsService:null,
+      answers:null,
+      answersService:null,
     }
   },
   created() {
@@ -84,6 +91,10 @@ export default {
     this.getStudentById(this.id);
     this.getSubject();
     this.getQuestion();
+    this.answersService= new AnswersApiServices();
+    this.answersService.findByQuestionID(this.id).then((response) => {
+      this.answers = response.data;
+    })
 
   },
   methods:{

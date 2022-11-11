@@ -99,6 +99,25 @@
       "content": "Una carga positiva experimenta una fuerza electrostática de atracción hacia un aislador neutro cercano. Verdadero o falso y la razón pls :(. \n",
       "userId": 1,
       "subjectId": 8
+    },
+    {
+      "content": "Dos hermanos tienen ahorrado $300. Si el mayor tiene 1/3 de lo que tiene el menor. ¿Cuánto tiene el mayor?:​",
+      "studentId": 1,
+      "subjectId": null,
+      "id": 3
+    },
+    {
+      "content": "si a^2 + b^2 = 13 y a * b = 6, halla el valor de a-b.",
+      "studentId": 2,
+      "subjectId": null,
+      "id": 4
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "ans": "no se loco jaja saludos",
+      "questionId": 1
     }
   ],
   "ranking": [
