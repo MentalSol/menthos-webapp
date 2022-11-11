@@ -1,17 +1,29 @@
 <template>
   <pv-card>
     <template #header>
-      <img class="image-profile"
-           :src="this.student.photo"
-      />
     </template>
     <template #title>
-      <h1 class= "mb-1" style="margin: 0;color: darkblue">
-        hola "{{student.name}}"
-      </h1>
+      <div class="flex flex-direction-row align-items-center justify-content-center">
+        <div>
+          <img class="image-profile"
+           :src="this.student.photo"
+          />
+        </div>
+        <div>
+          <h1 class= "mb-1 md:m-2" style="margin: 0;color: darkblue">
+            hola "{{student.name}}"
+          </h1>
+        </div>
+
+      </div>
     </template>
     <template #content>
-      <h3 style="margin: 0;color: forestgreen">"{{student.career}}  {{student.Ranking}}"</h3>
+      <div class="flex flex-direction-row align-items-center justify-content-center">
+        <div>
+          <h3 style="margin: 0;color: forestgreen">Carrera: {{student.career}}</h3>
+          <h3 style="margin: 0;color: forestgreen">Ranking: {{student.Ranking}}</h3>
+        </div>
+      </div>
     </template>
   </pv-card>
 

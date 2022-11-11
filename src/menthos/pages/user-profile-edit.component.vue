@@ -5,7 +5,7 @@
       <h2>Edita tu perfil</h2>
     </div>
     <div class="flex flex-direction-row align-content-center justify-content-start">
-      <img class="h-5rem" style="margin-right: 1rem" src="src/assets/images/perfil.png"/>
+      <img class="h-5rem" style="margin-right: 1rem" src="../../../public/images/perfil.png"/>
       <pv-button class="p-button-raised p-button-rounded w-7rem justify-content-center" style="margin-left: 1rem">Subir foto</pv-button>
     </div>
     <div class="flex flex-direction-row align-content-center justify-content-start">

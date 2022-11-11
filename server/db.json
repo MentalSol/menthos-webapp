@@ -28,43 +28,48 @@
   "subjects": [
     {
       "id": 1,
-      "title": "Calculo I"
+      "title": "Calculo I",
+      "img": "Calculo1.png"
     },
     {
       "id": 2,
-      "title": "Calculo II"
+      "title": "Calculo II",
+      "img": "Calculo2.png"
     },
     {
       "id": 3,
-      "title": "Matemática Básica"
+      "title": "Matemática Básica",
+      "img": "MatematicaBasica.png"
     },
     {
       "id": 4,
-      "title": "Matemática Computacional"
+      "title": "Matemática Computacional",
+      "img": "matematicaComputacional.png"
     },
     {
       "id": 5,
-      "title": "Programación I"
+      "title": "Programación I",
+      "img": "Programacion1.png"
     },
     {
       "id": 6,
-      "title": "Programación II"
+      "title": "Programación II",
+      "img": "Programacion2.png"
     },
     {
       "id": 7,
-      "title": "Física I"
+      "title": "Física I",
+      "img": "Fisica1.png"
     },
     {
       "id": 8,
-      "title": "Física II"
+      "title": "Física II",
+      "img": "Fisica2.png"
     },
     {
       "id": 9,
-      "title": "Química"
-    },
-    {
-      "id": 10,
-      "title": "Complejidad"
+      "title": "Química",
+      "img": "Quimica.png"
     }
   ],
   "teachers": [
@@ -77,14 +82,6 @@
       "id": 2,
       "name": "BROHER",
       "password": "eea"
-    },
-    {
-      "name": "kike",
-      "lastName": "kike",
-      "userName": "kikex",
-      "email": "",
-      "password": "kie",
-      "id": 3
     }
   ],
   "questions": [

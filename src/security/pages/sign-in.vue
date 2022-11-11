@@ -8,9 +8,9 @@
   <Divider />
   <div class="flex align-items-center justify-content-center ">
     <div >
-      <pv-input-text id="username" type="text" v-model="this.userName" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
+      <pv-input-text id="username" placeholder="Username" type="text" v-model="this.userName" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
 
-      <pv-input-text id="password" type="password" v-model="this.password" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem"/>
+      <pv-input-text id="password" placeholder="Password" type="password" v-model="this.password" class="block bg-bluegray-100 font-bold p-4 border-round mb-3 w-30rem h-1rem" />
       <div class="field">
         <span class="details"> Type User :  </span>
         <pv-select-button v-model="typeUser" :options="optionsUser"/>
@@ -21,15 +21,15 @@
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <div class="w-30rem h-3rem relative flex flex-direction-column">
-      <input type="checkbox" class="top-0 " id="checkbox" /><p class="relative">No cerrar sesión</p>
+    <div class="w-30rem h-3rem relative flex flex-direction-column field-checkbox">
+      <Chexbox inputId="binary" v-model="checked" :binary="true" /><label for="binary">No cerrar sesión</label>
       <a href="/recover-account"><p class="absolute top-0 right-0">¿Olvidaste tu contraseña?</p></a>
     </div>
 
   </div>
   <div class="flex align-items-center justify-content-center">
     <h2>¿No tienes una cuenta? </h2>   <RouterLink to="/sign-up">
-    <pv-button label="Regístrate" icon="pi pi-user-plus" class="p-button-success" v-on:keydown="validate()"   > </pv-button>
+    <pv-button label="Regístrate" icon="pi pi-user-plus" class="p-button-success md:m-2" v-on:keydown="validate()"   > </pv-button>
   </RouterLink>
   </div>
 
@@ -43,6 +43,7 @@ export default {
   name: "sign-in.vue",
   data(){
     return {
+      checked: false,
       id:Number,
       user:{},
       userName:'',

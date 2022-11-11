@@ -5,9 +5,9 @@
 
     <div class="col-fixed border-3" >
       <div class="flex flex-direction-row align-content-center justify-content-center">
-        <img class="h-4rem" style="margin-right: 1rem" src="src/assets/images/perfil.png"/>
+        <img class="h-4rem" style="margin-right: 1rem" src="../../../public/images/perfil.png"/>
         <h3>Brother1234</h3>
-        <img class="h-1rem" style="margin-left: 8rem" src="src/assets/images/campana.png"/>
+        <img class="h-1rem" style="margin-left: 8rem" src="../../../public/images/campana.png"/>
       </div>
       <div class="col-fixed border-2 w-7rem m-2">
         Estudiante
@@ -25,7 +25,7 @@
       </div>
       <div class="flex justify-content-center">
         <a href="/user-profile-edit"><pv-button class="p-button-raised p-button-rounded w-auto justify-content-center">
-          <img src="src/assets/images/pluma.png" style="margin-right: 1rem"/>Editar perfil
+          <img src="../../../public/images/pluma.png" style="margin-right: 1rem"/>Editar perfil
         </pv-button></a>
       </div>
       <div>

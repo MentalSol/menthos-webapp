@@ -5,7 +5,10 @@
       <h1 style="margin: 5px ;   padding: 1px;  ">Menthos</h1>
     </template>
     <template #end>
-      <pv-input-text placeholder="Search" type="text" />
+      <span class="p-input-icon-left">
+        <i class="pi pi-search" />
+        <pv-input-text placeholder="Search" type="text" />
+      </span>
     </template>
   </pv-menubar>
 </template>

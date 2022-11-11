@@ -5,6 +5,7 @@
   </div>
   <div class="flex justify-content-center">
     <div class="card">
+      <form @submit.prevent="handleSubmit(!v$.$invalid)" class="p-fluid">
       <div class="field">
         <h3>Nombre:</h3><pv-input-text id="name" v-model="name" class="w-30rem h-2rem"></pv-input-text>
       </div>
@@ -18,10 +19,10 @@
         <h3>Código UPC:</h3><pv-input-text id="UpcCode" v-model="UpcCode" class="w-30rem h-2rem"></pv-input-text>
       </div>
       <div class="field">
-        <h3>Escriba su contraseña:</h3><pv-input-text id="password" v-model="password" class="w-30rem h-2rem"></pv-input-text>
+        <h3>Escriba su contraseña:</h3><pv-password id="password" v-model="password" class="w-30rem h-2rem" toggleMask></pv-password>
       </div>
       <div class="field">
-        <h3>Confirme la contraseña:</h3><pv-input-text class="w-30rem h-2rem"></pv-input-text>
+        <h3>Confirme la contraseña:</h3><pv-password class="w-30rem h-2rem"></pv-password>
       </div>
       <div class="field">
         <div class="p-float-label">
@@ -29,11 +30,12 @@
           <label for="typeUser">User</label>
         </div>
       </div>
+      </form>
     </div>
 
   </div>
   <div class="flex align-items-center justify-content-center">
-    <a href="/sign-in"> <pv-button class="p-button-raised  w-10rem align-items-center h-3rem justify-content-center" @click="addNewUser()">Regístrarme</pv-button></a>
+    <pv-button class="p-button-raised  w-10rem align-items-center h-3rem justify-content-center" @click="addNewUser()">Regístrarme</pv-button>
 
   </div>
   <div class="flex align-items-center justify-content-center">
@@ -141,6 +143,7 @@ export default {
         }
         this.authenticationApiService
             .signUpTeacher( this.teacher)
+        this.$router.push('/sign-in')
       }else
       if ( this.typeUser === 'Student'){
         this.student={
@@ -153,6 +156,7 @@ export default {
         }
         this.authenticationApiService
             .signUpStudent( this.student)
+        this.$router.push('/sign-in')
       }
 
     },
