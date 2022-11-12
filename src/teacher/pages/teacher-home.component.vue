@@ -23,9 +23,6 @@
 
       </div>
       <div class="flex align-content-center justify-content-center">
-        <router-link :to="{ name: 'addQuestion' }">
-          <pv-button  icon="pi pi-plus" label="Preguntar"  />
-        </router-link >
       </div>
       <div v-for="question in questions" class="block">
         <pv-card>
