@@ -94,10 +94,10 @@
     },
     {
       "id": 2,
-      "name": "josue",
+      "name": "Fernando",
       "password": "eea",
       "photo": "https://www.ocpathink.org/uploads/assets/img/_1200x630_crop_center-center_82_none/Teacher-in-front-of-chalkboard.jpeg",
-      "lastname": "herrera"
+      "lastname": "Garay"
     },
     {
       "name": "henry",
@@ -144,6 +144,12 @@
       "studentId": 1,
       "subjectId": null,
       "id": 6
+    },
+    {
+      "content": "Cual es la derivada de x",
+      "studentId": 2,
+      "subjectId": null,
+      "id": 7
     }
   ],
   "answers": [
