@@ -10,13 +10,9 @@ import userProfileEditComponent from "@/menthos/pages/user-profile-edit.componen
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+
     {
       path:'/',
-      name:'home',
-      component: HomeViewComponent
-    },
-    {
-      path:'/sign-in',
       name:'sign-in',
       component: ()=>import('../security/pages/sign-in.vue')
     },
@@ -46,6 +42,11 @@ const router = createRouter({
           name: "profile-student",
           component: ()=>import('../student/pages/profile-student.component.vue'),
         },
+        {
+          path: "/student-profile-edit/:id",
+          name: "student-profile-edit",
+          component: ()=>import('../student/pages/edit-profile-student.component.vue'),
+        },
       ]
     },
     {
@@ -57,6 +58,11 @@ const router = createRouter({
           path: "teacher-home",
           name: "teacher-home",
           component: ()=>import('../teacher/pages/teacher-home.component.vue'),
+        },
+        {
+          path: "/profile-teacher/:id",
+          name: "profile-teacher",
+          component: ()=>import('../teacher/pages/profile-teacher.component.vue'),
         },
       ]
     },

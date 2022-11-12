@@ -28,7 +28,7 @@ export default {
       navigationTeacher: [
         {label: "HomeTeacher", icon: 'pi pi-fw pi-home', to:{name:'teacher-home'}},
         {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'teacher-home'}},
-        {label: "Profile", icon: 'pi pi-fw pi-user'},
+        {label: "Profile", icon: 'pi pi-fw pi-user',to: {name: 'profile-teacher'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],
 

@@ -1,28 +1,57 @@
 <template>
-  <pv-card>
-    <template #header>
-      <img class="image-profile"
-           :src="this.student.photo"
-      />
-    </template>
-    <template #title>
-      <h1 class= "mb-1" style="margin: 0;color: darkblue">
-        hola "{{student.name}}"
-      </h1>
-    </template>
-    <template #content>
-      <h3 style="margin: 0;color: forestgreen">"{{student.career}}  {{student.Ranking}}"</h3>
-    </template>
-  </pv-card>
+  <pv-toolbar class="bg-black-alpha-10 h-5rem"></pv-toolbar>
 
-  <pv-carousel :value="questions" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+  <div class="flex flex-direction-row align-items-center" style="justify-content: space-evenly">
 
-    <template #header>
-      <h1 class="text-center" style="margin: 0;color: darkblue">Questions:</h1>
-    </template>
+    <div class="col-fixed border-3" >
+      <div class="flex flex-direction-row align-content-center justify-content-center">
+        <img src="{{student.photo}}" alt="imagen de estudiante">
+        <h3>{{student.name}}</h3>
+      </div>
+      <div class="col-fixed border-2 w-7rem m-2">
+        Estudiante
+      </div>
+      <div class="flex flex-direction-row justify-content-between">
+        <div>
+          <p>Respuestas </p><p>0</p>
+        </div>
+        <div>
+          <p>Me gusta </p><p>0</p>
+        </div>
+        <div>
+          <p>Seguidores </p><p>0</p>
+        </div>
+      </div>
+      <div class="flex justify-content-center">
+        <a href="/user-profile-edit"><pv-button class="p-button-raised p-button-rounded w-auto justify-content-center">
+      Editar perfil
+        </pv-button></a>
+      </div>
+      <div>
+        <h3>Acerca de</h3>
+      </div>
+      <hr>
+      <div>
+        <div><h5>Ciclo: 4</h5></div>
+        <div><h5>Registrado: 1 de Septiembre del 2022</h5></div>
+        <div><h5>Mejor materia: Aplicaciones Web</h5></div>
+        <div><h5>Carrera: Ingenieria de Software</h5></div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <p>Questions</p>
+      </div>
+      <div class="col-fixed border-3 h-25rem">
+        <pv-carousel :value="questions" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+
+          <template #header>
+            <h1 class="text-center" style="margin: 0;color: darkblue">Questions:</h1>
+          </template>
 
 
-        <template #item="slotProps">
+          <template #item="slotProps">
 
             <div class="questioons-content">
               <div>
@@ -30,12 +59,14 @@
               </div>
             </div>
 
-        </template>
+          </template>
+
+        </pv-carousel>
+      </div>
+    </div>
+  </div>
 
 
-
-
-  </pv-carousel>
 
 </template>
 
