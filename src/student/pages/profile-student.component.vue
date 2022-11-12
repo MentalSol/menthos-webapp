@@ -5,7 +5,12 @@
 
     <div class="col-fixed border-3" >
       <div class="flex flex-direction-row align-content-center justify-content-center">
-        <img src="{{student.photo}}" alt="imagen de estudiante">
+        <img
+            class="user-img-0"
+            alt="user header"
+            style="border-radius: 3%"
+            :src="student.photo"
+        />
         <h3>{{student.name}}</h3>
       </div>
       <div class="col-fixed border-2 w-7rem m-2">

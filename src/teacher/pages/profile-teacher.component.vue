@@ -5,12 +5,16 @@
 
     <div class="col-fixed border-3" >
       <div class="flex flex-direction-row align-content-center justify-content-center">
-        <img class="h-4rem" style="margin-right: 1rem" src="src/assets/images/perfil.png"/>
-        <h3>Brother1234</h3>
-        <img class="h-1rem" style="margin-left: 8rem" src="src/assets/images/campana.png"/>
+        <img
+            class="user-img-0"
+            alt="user header"
+            style="border-radius: 3%"
+            :src="teacher.photo"
+        />
+        <h3>{{teacher.name}}</h3>
       </div>
       <div class="col-fixed border-2 w-7rem m-2">
-        Estudiante
+        Profesor
       </div>
       <div class="flex flex-direction-row justify-content-between">
         <div>
@@ -25,7 +29,7 @@
       </div>
       <div class="flex justify-content-center">
         <a href="/user-profile-edit"><pv-button class="p-button-raised p-button-rounded w-auto justify-content-center">
-          <img src="src/assets/images/pluma.png" style="margin-right: 1rem"/>Editar perfil
+          Editar perfil
         </pv-button></a>
       </div>
       <div>
@@ -33,30 +37,44 @@
       </div>
       <hr>
       <div>
-        <div><h5>Ciclo: 4</h5></div>
-        <div><h5>Registrado: 1 de Septiembre del 2022</h5></div>
+        <div><h5>Registrado: 4 de Septiembre del 2022</h5></div>
         <div><h5>Mejor materia: Aplicaciones Web</h5></div>
-        <div><h5>Carrera: Ingenieria de Software</h5></div>
-      </div>
-    </div>
-
-    <div>
-      <div>
-        <p>Respuestas 0 Preguntas 0</p>
-      </div>
-      <div class="col-fixed border-3 h-25rem">
-
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import {useRoute} from "vue-router";
+import {StudentsApiService} from "@/student/services/students-api.service";
+import {QuestionsApiServices} from "@/menthos/services/question/questions-api.services";
+import {TeachersApiService} from "@/teacher/services/teachers-api.service";
+
 export default {
-  name: "profile-teacher.component.vue"
+  name: "profile-teacher.component.vue",
+  data() {
+    return {
+      id:null,
+      teacher: {},
+      teacherService: null,
+    }
+  },
+  created() {
+    const route= useRoute();
+    this.id = route.params.id;
+
+    console.log(this.id)
+    this.teacherService = new TeachersApiService();
+    this.teacherService.getById(this.id).then((response) => {    //getById configurar para inicio de sesion copio el id del que inicio sesión
+      this.teacher = response.data;
+    });
+  },
 }
 </script>
 
 <style scoped>
-
+img{
+  width: 100px;
+  height: 100px;
+}
 </style>
