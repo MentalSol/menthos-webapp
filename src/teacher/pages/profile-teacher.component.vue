@@ -28,9 +28,9 @@
         </div>
       </div>
       <div class="flex justify-content-center">
-        <a href="/user-profile-edit"><pv-button class="p-button-raised p-button-rounded w-auto justify-content-center">
-          Editar perfil
-        </pv-button></a>
+        <router-link :to="{ name: 'teacher-profile-edit', id}">
+          <pv-button id="button" label="Edit" />
+        </router-link>
       </div>
       <div>
         <h3>Acerca de</h3>

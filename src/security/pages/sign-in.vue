@@ -29,7 +29,7 @@
   </div>
   <div class="flex align-items-center justify-content-center">
     <h2>¿No tienes una cuenta? </h2>   <RouterLink to="/sign-up">
-    <pv-button label="Regístrate" icon="pi pi-user-plus" class="p-button-success md:m-2" v-on:keydown="validate()"   > </pv-button>
+    <pv-button label="Regístrate" class="p-button-primary md:m-2" v-on:keydown="validate()"   > </pv-button>
   </RouterLink>
   </div>
 

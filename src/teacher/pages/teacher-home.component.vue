@@ -1,36 +1,50 @@
 <template>
   <h1>Bienvenido a Menthos {{teacherData.name}}</h1>
   <div class="grid">
-    <div class="col-2 surface-500	border-3">
+    <div class="col-2	border-0">
       <div class="block">
         <h1>Asignaturas</h1>
       </div>
-      <div >
-        <div v-for="subject in subjects" class="block">
-          {{subject.image}} <h4>{{subject.title}}</h4>
+      <div>
+        <div v-for="subject in subjects" class="block flex flex-direction-row align-items-center">
+          <div>
+            <img v-bind:src="'../../../public/images/' + subject.img" class="img-fluid" v-bind:alt="subject.title">
+          </div>
+          <div>
+            <h4>{{subject.title}}</h4>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-7 surface-500 border-3	">
+    <div class="col-7 border-0	">
       <div class="flex align-items-center justify-content-center ">
         <h1>Ey! Soy BotBrain</h1>
         <h1>¿Qué es lo que quieres hacer?</h1>
 
       </div>
-      <div >
+      <div class="flex align-content-center justify-content-center">
+        <router-link :to="{ name: 'addQuestion' }">
+          <pv-button  icon="pi pi-plus" label="Preguntar"  />
+        </router-link >
       </div>
       <div v-for="question in questions" class="block">
-        <pv-card >
+        <pv-card>
           <template #header>
             <h1>Question #{{question.id}}</h1>
           </template>
           <template #title>
             {{question.content}}
           </template>
+          <template #item="slotProps">
+            <h1>{{slotProps.data.answers}}</h1>
+          </template>
+          <template #footer>
+            <pv-button label="Responder"></pv-button>
+          </template>
         </pv-card>
       </div>
     </div>
-    <div class="col-3 surface-500	border-3">
+    <div class="col-3	border-0">
       <pv-card>
         <template #header >
           <img
@@ -42,9 +56,6 @@
         </template>
         <template #title>
           {{teacherData.name}}
-        </template>
-        <template #content>
-          <pv-button label="Info" class="p-button-info" @click="goProfile()"></pv-button>
         </template>
       </pv-card>
     </div>

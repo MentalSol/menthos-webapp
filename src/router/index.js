@@ -64,6 +64,11 @@ const router = createRouter({
           name: "profile-teacher",
           component: ()=>import('../teacher/pages/profile-teacher.component.vue'),
         },
+        {
+          path: "/teacher-profile-edit/:id",
+          name: "teacher-profile-edit",
+          component: ()=>import('../teacher/pages/edit-profile-teacher.component.vue'),
+        },
       ]
     },
   ]

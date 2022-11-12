@@ -143,7 +143,7 @@ export default {
         }
         this.authenticationApiService
             .signUpTeacher( this.teacher)
-        this.$router.push('/sign-in')
+        this.$router.push('/')
       }else
       if ( this.typeUser === 'Student'){
         this.student={
