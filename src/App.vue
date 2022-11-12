@@ -10,7 +10,5 @@ export default {
 }
 </script>
 <style>
-body{
-  background-color: lightblue;
-}
+
 </style>

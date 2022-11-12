@@ -36,6 +36,7 @@ import Checkbox from "primevue/checkbox";
 import SelectButton from "primevue/selectbutton";
 import Menubar from "primevue/menubar";
 import Carousel from "primevue/carousel";
+import Password from "primevue/password";
 createApp(App)
 
     .use(createPinia())
@@ -58,6 +59,7 @@ createApp(App)
     .component('pv-tag',Tag)
     .component('Divider',Divider)
     .component('Chexbox',Checkbox)
+    .component('pv-password',Password)
     .component('pv-select-button',SelectButton)
     .component('pv-menubar',Menubar)
     .component('pv-drop-down',Dropdown)
