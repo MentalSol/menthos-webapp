@@ -24,7 +24,7 @@ export default {
       user: String,
       navigationStudent: [
         {label: "HomeStudent", icon: 'pi pi-fw pi-home', to: {name:'student-home'}},
-        {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'student-home'}},
+        {label: "BrainTube", icon: 'pi pi-fw pi-book', to: {name:'student-braintube'}},
         {label: "Profile", icon: 'pi pi-fw pi-user', to:{name:'profile-student'}},
         {label: "Sign out", icon: 'pi pi-fw pi-sign-out', to: "/"},
       ],

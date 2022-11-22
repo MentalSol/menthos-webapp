@@ -43,6 +43,11 @@ const router = createRouter({
           component: ()=>import('../student/pages/profile-student.component.vue'),
         },
         {
+          path: "student-braintube",
+          name: "student-braintube",
+          component: ()=>import('../student/pages/student-braintube.component.vue'),
+        },
+        {
           path: "/student-profile-edit/:id",
           name: "student-profile-edit",
           component: ()=>import('../student/pages/edit-profile-student.component.vue'),

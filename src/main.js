@@ -37,6 +37,7 @@ import SelectButton from "primevue/selectbutton";
 import Menubar from "primevue/menubar";
 import Carousel from "primevue/carousel";
 import Password from "primevue/password";
+import Image from "primevue/image";
 createApp(App)
 
     .use(createPinia())
@@ -64,4 +65,5 @@ createApp(App)
     .component('pv-menubar',Menubar)
     .component('pv-drop-down',Dropdown)
     .component('pv-carousel',Carousel)
+    .component('pv-image',Image)
     .mount('#app')
