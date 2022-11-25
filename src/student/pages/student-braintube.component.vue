@@ -4,7 +4,7 @@
   <div v-for="video in videos" >
     {{video.id}}
     <div>
-      <img src="{{video.url}}" alt="portada de video">
+      <img src="{{video.videoUrl}}" alt="portada de video">
 
     </div>
     <div>
